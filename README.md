@@ -1,4 +1,6 @@
-# SDRUno-Smart-Switch
-An Arduino detects the frequency SDRUno is set to and switches Antennas automatically.
-What is this?
-The frequency is decoded and the user can specify which output is switched for that band of frequencies
+SDRuno SMART SWITCH
+
+David Whitty G4FEV
+
+This software is given freely for non-commercial use with no guarantee given or implied.
+SDRUno is a product of SDRPlay Ltd with which the author has no connection other than as a satisfied customer.
