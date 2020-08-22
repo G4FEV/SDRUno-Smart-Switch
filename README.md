@@ -58,12 +58,12 @@ If you want to use Ready-Made Relay Boards look for the type with a jumper that 
 <P ALIGN="LEFT"><img src="Images/relayno.jpg" width=300> &nbsp; &nbsp; &nbsp; &nbsp; <img src="Images/relayyes.jpg" width=300
 
 
-123
-<P ALIGN="CENTER"><img src="Images/relaycct2.jpg" width=400>
+
+<P ALIGN="CENTER"><img src="Images/relaycct2.jpg" width=500>
 
 
-456
-<P ALIGN="CENTER"><img src="Images/Schematic1.jpg" width=500>
+
+<P ALIGN="CENTER"><img src="Images/Schematic1.jpg" width=600>
 
 
 WORK IN PROGRESS.
