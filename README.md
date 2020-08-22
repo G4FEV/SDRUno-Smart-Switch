@@ -73,16 +73,19 @@ Shown below are the first three, of 14, Bands
 /////////////////////////////////////////////////////////////////////////////////////////
 
 //Band A
+
 char AntennaA[ ] = " VLF Antenna ";  //Fill all 13 characters
 long BandALow = 1000;              //1KHz  Band A     Low Limit
 long BandAHi = 150000;            //150KHz  Band A     High Limit
 
 //Band B
+
 char AntennaB[ ] = " Medium Wave ";  //Fill all 13 characters
 long BandBLow = 150001;           // Band B   Low Limit
 long BandBHi = 1600000;          //1.6MHz Band B     High Limit
 
 //Band C
+
 char AntennaC[ ] = " LF Antenna  ";  //Fill all 13 characters
 long BandCLow = 1600001;           // Band C   Low Limit
 long BandCHi = 2500000;           //2.5 MHz Band C   High Limit
@@ -95,9 +98,9 @@ The bands don’t have to run contiguously. This is just an example.
 
 SUGGESTION.
 
-Run the code as unmodified using LEDs on the Band Outputs and see how they react to frequency changes before you modify for your own requirements. 
+* Run the code as unmodified using LEDs on the Band Outputs and see how they react to frequency changes before you modify for your own requirements. 
 
-You don’t have to use all the outputs just park them out of the way near the 2GHz (or 1KHz) end of the spectrum so they never operate or comment them out.
+* You don’t have to use all the outputs just park them out of the way near the 2GHz (or 1KHz) end of the spectrum so they never operate or comment them out.
 
 Just because there are 14 outputs (Bands A–N) the user can split the spectrum into as few chunks as required.
 Take care as you move higher up in the spectrum. There are a lot of zeroooos to trip over. It’s easy to get in a right old mess. (I speak from experience!)
