@@ -1,4 +1,4 @@
-# SDRuno SMART SWITCH
+# SDRuno SMART-SWITCH
 
 ## David Whitty G4FEV
 
@@ -121,37 +121,30 @@ If all is well the display should change from <B>“Waiting for data”</B>
 ## Helpful-Notes.
 
 
-Multi VRX setups. 
+* Multi VRX setups. 
 You can use as many Smart-Switches as you like and allocate a smart -switch to each VRX. Just set the com port for each individual Smart -Switch to the VRX as above.
 
-Scanning
+* Scanning
 It may be unwise to switch antennas while scanning. Ensure your scanning frequencies are all on one band for optimum performance.
 It will work however the switching time may cause signals to be lost during the changeover period
 
-If you really want it to switch superfast uncomment ALL of the Serial.print  lines to the Serial Monitor and experiment with increasing  the baud rates  Comms speed test up to 57600
-
-Can I some more Sir.
-With some minor code changes switch to an Arduino Mega which will provide 54 outputs which should be enough for anyone.
-
-
-Error message on starting SDRUno
+* Error message on starting SDRUno
 If you start SDRUno before connecting the FTDI  USB converter it will throw up this error. 
 You must go into the VRX SETT and toggle the CAT setting ENABLE & CONNECT
 
+<P ALIGN="CENTER"><img src="Images/Capture1.JPG" width=500>
 
-LCD Blank Screen.
+* LCD Blank Screen.
 Have you set the correct I2c address for your LCD. These are normally  0x3F or 0xFF or even 0x27 if you have an older display.
 Use the Arduino I2c scanner sketch to confirm your address and the Hello World example to check it works
 
+* Serial.print messages
 If you uncomment ALL the Serial.print messages the code will run slower and a warning will appear when compiling;-      
-Low dynamic memory warning 78% may cause instability
+<B><i>Low dynamic memory warning 78% may cause instability</B></i>
 So remember to re-comment these before final use for optimum performance.
 
 
-//All debug messages to the Serial Monitor (Apart from the current Frequency) are 
-//commented out which makes the code run slightly faster. 
-// Uncomment the                 Serial.print    lines to see how the code works.
-// I always put my             //Serial.print    lines at the centre of the page
+
 
 Remember to add some Ferrite Noise Suppression to all leads to and from the computer. The Ferrite Grade may be totally wrong but they never do any harm.
 
