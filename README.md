@@ -72,6 +72,8 @@ Shown below are the first three, of 14, Bands
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+<P ALIGN="CENTER"><img src="Images/Code1.png" width=600>
+     
 //Band A
 
 char AntennaA[ ] = " VLF Antenna ";  //Fill all 13 characters
