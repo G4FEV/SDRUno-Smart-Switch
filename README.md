@@ -46,7 +46,7 @@ RS232 to TTL converters are easily and cheaply available online.
 
 <P ALIGN="CENTER"><img src="Images/ftdiall.jpg" width=250>
 <P ALIGN="LEFT">
-RELAYS
+<B> RELAYS </B>
 
 The maximum current an Arduino pin can switch is 40mA so we use a transistor to switch coax relays or slave relays.
 
