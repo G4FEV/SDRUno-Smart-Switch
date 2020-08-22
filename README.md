@@ -56,7 +56,7 @@ You could swap all the Hi and lows but it would mean most of your relays would b
 If you want to use Ready-Made Relay Boards look for the type with a jumper that can be set ACTIVE HI.
 
 <P ALIGN="LEFT"><img src="Images/relayno.jpg" width=200> <img src="Images/relayyes.jpg" width=200>  
- <img src="Images/relaycct2.jpg" width=200>
+ <img src="Images/relaycct2.jpg" width=400>
 
 <P ALIGN="CENTER"><img src="Images/Schematic1.jpg" width=600>
 
