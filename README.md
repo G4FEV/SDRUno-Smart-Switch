@@ -76,6 +76,7 @@ You may edit the frequencies and the Antenna / Filter name.
 Shown below are the first three, of 14, Bands
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 //Band A
 char AntennaA[ ] = " VLF Antenna ";  //Fill all 13 characters
 long BandALow = 1000;              //1KHz  Band A     Low Limit
@@ -97,7 +98,9 @@ Notice how the next band up starts one Hertz above the last band.
 The bands don’t have to run contiguously. This is just an example.
 
 
-SUGGESTION. Run the code as unmodified using LEDs on the Band Outputs and see how they react to frequency changes before you modify for your own requirements. 
+SUGGESTION.
+
+Run the code as unmodified using LEDs on the Band Outputs and see how they react to frequency changes before you modify for your own requirements. 
 
 You don’t have to use all the outputs just park them out of the way near the 2GHz (or 1KHz) end of the spectrum so they never operate or comment them out.
 
@@ -107,13 +110,14 @@ Take care as you move higher up in the spectrum. There are a lot of zeroooos to 
 There is no reason why you shouldn’t have TWO or more outputs active for a particular frequency if that suits your needs (To switch in a filter or preamp).
 
 Which Pin is which band.
+
 The Pin definitions for each band are just below the Band Limits section in the code.
 Unless you want to modify the code there is nothing else that requires editing
 Serial.print debug messages have been commented-out, apart from the current Frequency.
 Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs.
-See also Helpful-Notes section.
+<i>See also Helpful-Notes section.</i>
 
-SETTING UP SDRUno
+## SETTING UP SDRUno
 
 Plug in your USB to FTDI TTL  converter and note its Com port.
 For Windows you will find this in Devices and Printers.
@@ -134,7 +138,7 @@ Picture
 
 
 
-Helpful-Notes.
+## Helpful-Notes.
 
 
 Multi VRX setups. 
