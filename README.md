@@ -93,7 +93,6 @@ Serial.print debug messages have been commented-out, apart from the current Freq
 
 Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs.  BUT WATCH OUT.
 
-<B><i>See also Helpful-Notes section.</i></B>
 
 ## SETTING UP SDRUno
 
@@ -106,9 +105,8 @@ Select the com port and set the Baud Rate to 9600
 Select <B> Enable & Connect.</B>
 
 That’s it. 
-If all is well the display should change from <B>“Waiting for data”</B>
 
-<B><i>See also Helpful-Notes section.</i></B>
+If all is well the display should change from <B>“Waiting for data”</B>
 
 
 <P ALIGN="CENTER"><img src="Images/Capture2.jpg" width=600>
@@ -118,7 +116,7 @@ If all is well the display should change from <B>“Waiting for data”</B>
 
 
 
-## Helpful-Notes.
+## Notes.
 
 
 * Multi VRX setups. 
@@ -132,21 +130,20 @@ It will work however the switching time may cause signals to be lost during the 
 If you start SDRUno before connecting the FTDI  USB converter it will throw up this error. 
 You must go into the VRX SETT and toggle the CAT setting ENABLE & CONNECT
 
-<P ALIGN="CENTER"><img src="Images/Capture1.JPG" width=500>
+<P ALIGN="CENTER"><img src="Images/Capture1.JPG" width=600>
 
 * LCD Blank Screen.
 Have you set the correct I2c address for your LCD. These are normally  0x3F or 0xFF or even 0x27 if you have an older display.
+
 Use the Arduino I2c scanner sketch to confirm your address and the Hello World example to check it works
 
 * Serial.print messages
 If you uncomment ALL the Serial.print messages the code will run slower and a warning will appear when compiling;-      
-<B><i>Low dynamic memory warning 78% may cause instability</B></i>
-So remember to re-comment these before final use for optimum performance.
+<P ALIGN="CENTER"><B><i>Low dynamic memory warning 78% may cause instability</B></i>
 
+Remember to re-comment these before final use for optimum performance.
 
-
-
-Remember to add some Ferrite Noise Suppression to all leads to and from the computer. The Ferrite Grade may be totally wrong but they never do any harm.
+* Add some Ferrite Noise Suppression to all leads to and from the computer. The Ferrite Grade may be totally wrong but they never do any harm.
 
 
  With a note on switching filter and antenna simultaneously
