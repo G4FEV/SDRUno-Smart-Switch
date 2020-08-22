@@ -143,5 +143,23 @@ LCD Blank Screen.
 Have you set the correct I2c address for your LCD. These are normally  0x3F or 0xFF or even 0x27 if you have an older display.
 Use the Arduino I2c scanner sketch to confirm your address and the Hello World example to check it works
 
+If you uncomment ALL the Serial.print messages the code will run slower and a warning will appear when compiling;-      
+Low dynamic memory warning 78% may cause instability
+So remember to re-comment these before final use for optimum performance.
+
+
+//All debug messages to the Serial Monitor (Apart from the current Frequency) are 
+//commented out which makes the code run slightly faster. 
+// Uncomment the                 Serial.print    lines to see how the code works.
+// I always put my             //Serial.print    lines at the centre of the page
+
+Remember to add some Ferrite Noise Suppression to all leads to and from the computer. The Ferrite Grade may be totally wrong but they never do any harm.
+
+
+ With a note on switching filter and antenna simultaneously
+
+Why the filter I am using
+How am I using it.
+
 
 
