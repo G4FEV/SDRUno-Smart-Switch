@@ -64,7 +64,7 @@ If you want to use Ready-Made Relay Boards look for the type with a jumper that 
 
 Set the correct I2c address for your LCD I2c or you will just see a blank screen. (0x27) for older displays (0x3F) for newer displays or use the Arduino I2c scanner to discover the address.
 
-Setting the Band Limits
+<B>Setting the Band Limits</B>
 
 Modify this part of the code to suit your application, located near the top of the sketch.
 You may edit the frequencies and the Antenna / Filter name.
@@ -104,7 +104,7 @@ Notice how the next band up starts one Hertz above the last band.
 The bands don’t have to run contiguously. This is just an example.
 
 
-SUGGESTION.
+<B>SUGGESTION.</B>
 
 * Run the code unmodified using LEDs on the Band Outputs and see how they react to frequency changes before you modify for your own requirements. 
 
@@ -119,25 +119,27 @@ SUGGESTION.
 Serial.print debug messages have been commented-out, apart from the current Frequency.
 
 
-Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs.
+Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs.  BUT WATCH OUT.
 
-<i>See also Helpful-Notes section.</i>
+<B><i>See also Helpful-Notes section.</i></B>
 
 ## SETTING UP SDRUno
 
-Plug in your USB to FTDI TTL  converter and note its Com port.
-For Windows you will find this in Devices and Printers.
+Plug in your USB to FTDI TTL  converter and note its Com port. For Windows you will find this in Devices and Printers.
 
 Top Left corner of theSDRUno  “RX Control window” click the Sett button.
 Navigate along to the CAT option.
+
 Select the com port and set the Baud Rate to 9600
-Select Enable & Connect.
+Select <B> Enable & Connect.</B>
+
 That’s it. 
-If all is well the display should change from “Waiting for data”
-See also Helpful-Notes section.
+If all is well the display should change from <B>“Waiting for data”</B>
+
+<B><i>See also Helpful-Notes section.</i></B>
 
 
-Picture
+<P ALIGN="CENTER"><img src="Images/Capture2.jpg" width=600>
 
 
 
