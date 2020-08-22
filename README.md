@@ -70,38 +70,8 @@ Modify this part of the code to suit your application, located near the top of t
 You may edit the frequencies and the Antenna / Filter name.
 Shown below are the first three, of 14, Bands
 
-/////////////////////////////////////////////////////////////////////////////////////////
-
-<P ALIGN="CENTER"><img src="Images/Code1.png" width=600>
+<P ALIGN="LEFT"><img src="Images/Code1.png" width=600>
      
-//Band A
-
-char AntennaA[ ] = " VLF Antenna ";  //Fill all 13 characters
-
-long BandALow = 1000;    //1KHz  Band A     Low Limit
-
-long BandAHi = 150000;                 //150KHz  Band A     High Limit
-
-
-//Band B
-
-char AntennaB[ ] = " Medium Wave ";  //Fill all 13 characters
-
-long BandBLow = 150001;           // Band B   Low Limit
-
-long BandBHi = 1600000;          //1.6MHz Band B     High Limit
-
-
-//Band C
-
-char AntennaC[ ] = " LF Antenna  ";  //Fill all 13 characters
-
-long BandCLow = 1600001;           // Band C   Low Limit
-
-long BandCHi = 2500000;           //2.5 MHz Band C   High Limit
-
-//////////////////////////////////////////////////////////////////////////////////////////////
-
 Notice how the next band up starts one Hertz above the last band.
 The bands don’t have to run contiguously. This is just an example.
 
