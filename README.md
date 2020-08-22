@@ -76,9 +76,9 @@ Shown below are the first three, of 14, Bands
 
 char AntennaA[ ] = " VLF Antenna ";  //Fill all 13 characters
 
-long BandALow = 1000;    &nbsp &nbsp   &nbsp   &nbsp   //1KHz  Band A     Low Limit
+long BandALow = 1000;    //1KHz  Band A     Low Limit
 
-long BandAHi = 150000;                            //150KHz  Band A     High Limit
+long BandAHi = 150000;                 //150KHz  Band A     High Limit
 
 
 //Band B
@@ -106,7 +106,7 @@ The bands don’t have to run contiguously. This is just an example.
 
 SUGGESTION.
 
-* Run the code as unmodified using LEDs on the Band Outputs and see how they react to frequency changes before you modify for your own requirements. 
+* Run the code unmodified using LEDs on the Band Outputs and see how they react to frequency changes before you modify for your own requirements. 
 
 * You don’t have to use all the outputs just park them out of the way near the 2GHz (or 1KHz) end of the spectrum so they never operate or comment them out.
 
@@ -115,12 +115,12 @@ SUGGESTION.
 
 * There is no reason why you shouldn’t have TWO or more outputs active for a particular frequency if that suits your needs (To switch in a filter or preamp).
 
-Which Pin is which band.
 
-The Pin definitions for each band are just below the Band Limits section in the code.
-Unless you want to modify the code there is nothing else that requires editing
 Serial.print debug messages have been commented-out, apart from the current Frequency.
+
+
 Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs.
+
 <i>See also Helpful-Notes section.</i>
 
 ## SETTING UP SDRUno
