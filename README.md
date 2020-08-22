@@ -55,13 +55,7 @@ The code is designed for ACTIVE HIGH.
 You could swap all the Hi and lows but it would mean most of your relays would be operated all the time.
 If you want to use Ready-Made Relay Boards look for the type with a jumper that can be set ACTIVE HI.
 
-<P ALIGN="LEFT"><img src="Images/relayno.jpg" width=250> <img src="Images/relayyes.jpg" width=300
-
-
-
-<P ALIGN="CENTER"><img src="Images/relaycct2.jpg" width=500>
-
-
+<P ALIGN="LEFT"><img src="Images/relayno.jpg" width=250> <img src="Images/relayyes.jpg" width=300  <img src="Images/relaycct2.jpg" width=500>
 
 <P ALIGN="CENTER"><img src="Images/Schematic1.jpg" width=600>
 
