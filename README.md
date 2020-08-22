@@ -53,12 +53,9 @@ The maximum current an Arduino pin can switch is 40mA so we use a transistor to 
 Ready mounted Arduino relays are available on auction sites but CAUTION. Many of these are Active LOW. 
 The code is designed for ACTIVE HIGH.
 You could swap all the Hi and lows but it would mean most of your relays would be operated all the time.
+If you want to use Ready-Made Relay Boards look for the type with a jumper that can be set ACTIVE HI.
 
 <P ALIGN="CENTER"><img src="Images/relayno.jpg" width=300> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="Images/relayyes.jpg" width=300
-
-
-
-If you want to use Ready-Made Relay Boards look for the type with a jumper that can be set ACTIVE HI.
 
 
 <P ALIGN="CENTER"><img src="Images/relaycct2.jpg" width=400>
