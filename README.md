@@ -76,9 +76,9 @@ Shown below are the first three, of 14, Bands
 
 char AntennaA[ ] = " VLF Antenna ";  //Fill all 13 characters
 
-long BandALow = 1000;              //1KHz  Band A     Low Limit
+long BandALow = 1000;    &nbsp &nbsp   &nbsp   &nbsp   //1KHz  Band A     Low Limit
 
-long BandAHi = 150000;            //150KHz  Band A     High Limit
+long BandAHi = 150000;                            //150KHz  Band A     High Limit
 
 
 //Band B
@@ -113,7 +113,7 @@ SUGGESTION.
 * Just because there are 14 outputs (Bands A–N) the user can split the spectrum into as few chunks as required.
 * Take care as you move higher up in the spectrum. There are a lot of zeroooos to trip over. It’s easy to get in a right old mess. (I speak from experience!)
 
-*There is no reason why you shouldn’t have TWO or more outputs active for a particular frequency if that suits your needs (To switch in a filter or preamp).
+* There is no reason why you shouldn’t have TWO or more outputs active for a particular frequency if that suits your needs (To switch in a filter or preamp).
 
 Which Pin is which band.
 
