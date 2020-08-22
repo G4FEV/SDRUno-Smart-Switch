@@ -45,7 +45,7 @@ The Arduino requires TTL levels (5v) but a computer uses RS232 levels. Never con
 RS232 to TTL converters are easily and cheaply available online.            
 
 <P ALIGN="CENTER"><img src="Images/ftdiall.jpg" width=250>
-
+<P ALIGN="LEFT">
 RELAYS
 
 The maximum current an Arduino pin can switch is 40mA so we use a transistor to switch coax relays or slave relays.
@@ -55,8 +55,7 @@ The code is designed for ACTIVE HIGH.
 You could swap all the Hi and lows but it would mean most of your relays would be operated all the time.
 
 <P ALIGN="CENTER"><img src="Images/relayno.jpg" width=300> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="Images/relayyes.jpg" width=300
-
-<P>
+<P ALIGN="LEFT">
 If you want to use Ready-Made Relay Boards look for the type with a jumper that can be set ACTIVE HI.
 
 
