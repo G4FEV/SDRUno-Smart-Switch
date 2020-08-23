@@ -2,6 +2,8 @@
 
 ## David Whitty G4FEV
 
+<i>Last edit 23 August 2020.</i>
+
 This software is given freely for non-commercial use with no guarantee given or implied.
 SDRUno is a product of SDRPlay Ltd with which the author has no connection other than as a satisfied customer.
 
