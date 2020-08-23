@@ -123,7 +123,7 @@ If all is well the display should change from <B>“Waiting for data”</B>
 * <b>Multi VRX setups.</b> 
 You can use as many Smart-Switches as you like and allocate a Smart-Switch to each VRX. Just set the com port for each individual Smart-Switch to the VRX as above.
 
-*<b> Scanning.</b> It may be unwise to switch antennas while scanning. Ensure your scanning frequencies are all on one band for optimum performance. It will work however the switching time may cause signals to be lost during the changeover period.
+* <b> Scanning.</b> It may be unwise to switch antennas while scanning. Ensure your scanning frequencies are all on one band for optimum performance. It will work however the switching time may cause signals to be lost during the changeover period.
 
 * <b>Error message on starting SDRUno.</b> If you start SDRUno before connecting the FTDI USB converter it will throw up this error. It's no big deal, just go into the VRX <b>SETT</b> and toggle the <b>CAT</b> setting <b>ENABLE & CONNECT</b>
 
@@ -148,4 +148,4 @@ Search <i>janielectronics.com HA8LFK filter</i> also has an ebay shop.
 <P ALIGN="LEFT"><img src="Images/zsc001.JPG" width=200> <img src="Images/zsc002.JPG" width=200> <img src="Images/zsc003a.jpg" width=250>  
 <img src="Images/zsc004.JPG" width=200>  
 
-That's all folks. 73 Dave.
+That's all folks. 73 de Dave G4FEV.
