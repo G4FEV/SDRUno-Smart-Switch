@@ -23,7 +23,7 @@ The Arduino sends the    IF;    Status request to an SDRuno VRX.
 SDRuno responds with;-
 
      IF0145500000   +00000000002100000; 
-           |                   | |
+           |                   ||
         145.500 MHz           |  | VFO
                               |	
                              Mode  
@@ -101,7 +101,7 @@ The bands don’t have to run contiguously. This is just an example.
 Serial.print debug messages have been commented-out, apart from the current Frequency.
 
 
-Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs. Remember to uncomment Serial.print messages when you are finished and the code will run slightly faster.
+Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs. Remember to Re-comment Serial.print messages when you are finished and the code will run slightly faster.
 
 
 ## SETTING UP SDRUno
@@ -114,7 +114,7 @@ Select the com port and set the Baud Rate to 9600. Select <B> Enable & Connect.<
 
 That’s it. 
 
-If all is well the display should change from <B>“Waiting for data”</B>
+If all is well the Smart-Switch LCD display should change from <B>“Waiting for data”</B>
 
 
 <P ALIGN="CENTER"><img src="Images/Capture2.jpg" width=600>
