@@ -29,10 +29,15 @@ The Arduino has 14 unused pins (If we include unused Analogue pins) which may al
 ## Does it compile?
 
 Beware! There are several versions of  SoftwareSerial and Liquidcrystal I2c libraries which may not be compatible without minor changes to the declarations.
+
 Built & tested using Arduino IDE Version 1.8.13
+
 SoftwareSerial from Arduino IDE Version 1.8.13
+
 LiquidCrystal     I2C-1.1.2     by Frank de Brabander
+
 SDRUno Version 1.33 and 1.40.1
+
 SDRplay RSP1A (Because that’s all I have).
 
 We use the SoftwareSerial library for the coms to SDRuno. 
@@ -41,6 +46,7 @@ Pin 8 is Rxd and 9 Txd which leaves the normal Arduino coms port for debugging i
 ## Hardware Requirements.
 
 FTDI USB to SERIAL converter
+
 The Arduino requires TTL levels (5v) but a computer uses RS232 levels. Never connect a computer directly to an Arduino or damage may occur.
 RS232 to TTL converters are easily and cheaply available online.            
 
@@ -91,15 +97,15 @@ The bands don’t have to run contiguously. This is just an example.
 Serial.print debug messages have been commented-out, apart from the current Frequency.
 
 
-Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs.  BUT WATCH OUT.
+Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs. Remember to uncomment Serial.print messages when you are finished and the code will run slightly faster.
 
 
 ## SETTING UP SDRUno
 
-Plug in your USB to FTDI TTL  converter and note its Com port. For Windows you will find this in Devices and Printers.
+Plug in your USB to FTDI TTL  converter and note its Com port. For Windows you will find this in <i><b> Devices and Printers.</i></b>
 
-Top Left corner of theSDRUno  “RX Control window” click the Sett button.
-Navigate along to the CAT option.
+Top Left corner of theSDRUno <b> RX Control window </b> click the<b> SETT</b> button.
+Navigate along to the <b>CAT</b> option.
 
 Select the com port and set the Baud Rate to 9600
 Select <B> Enable & Connect.</B>
@@ -111,45 +117,36 @@ If all is well the display should change from <B>“Waiting for data”</B>
 
 <P ALIGN="CENTER"><img src="Images/Capture2.jpg" width=600>
 
-
-
-
-
-
 ## Notes.
 
 
-* Multi VRX setups. 
-You can use as many Smart-Switches as you like and allocate a smart -switch to each VRX. Just set the com port for each individual Smart -Switch to the VRX as above.
+* <b>Multi VRX setups.</b> 
+You can use as many Smart-Switches as you like and allocate a Smart-Switch to each VRX. Just set the com port for each individual Smart-Switch to the VRX as above.
 
-* Scanning
+*<b> Scanning.</b>
 It may be unwise to switch antennas while scanning. Ensure your scanning frequencies are all on one band for optimum performance.
 It will work however the switching time may cause signals to be lost during the changeover period
 
-* Error message on starting SDRUno
-If you start SDRUno before connecting the FTDI  USB converter it will throw up this error. 
-You must go into the VRX SETT and toggle the CAT setting ENABLE & CONNECT
+* <b>Error message on starting SDRUno.</b>
+If you start SDRUno before connecting the FTDI USB converter it will throw up this error. It's no big deal, just go into the VRX <b>SETT</b> and toggle the <b>CAT</b> setting <b>ENABLE & CONNECT</b>
 
 <P ALIGN="CENTER"><img src="Images/Capture1.JPG" width=600>
 
-* LCD Blank Screen.
+* <b>LCD Blank Screen.</b>
 Have you set the correct I2c address for your LCD. These are normally  0x3F or 0xFF or even 0x27 if you have an older display.
-
 Use the Arduino I2c scanner sketch to confirm your address and the Hello World example to check it works
 
-* Serial.print messages
+* <b>Serial.print messages.</b>
 If you uncomment ALL the Serial.print messages the code will run slower and a warning will appear when compiling;-      
 <P ALIGN="CENTER"><B><i>Low dynamic memory warning 78% may cause instability</B></i>
 
 Remember to re-comment these before final use for optimum performance.
 
-* Add some Ferrite Noise Suppression to all leads to and from the computer. The Ferrite Grade may be totally wrong but they never do any harm.
-
 ## Practical Application
 
-For antenna switching I use a nice SMA 6 Way relay on Bands A to F. Band outputs G to M are used to switch a rather nice bandpass filter from HA8LFK. Normally additional filtering is not required for an SDRPlay RSP but I have a number of high power local stations which can cause the spectrum to jump when they transmit.
+For antenna switching I use a 6 Way SMA relay on Bands A to F. Band outputs G to M are used to switch a rather nice bandpass filter from HA8LFK. Normally additional filtering is not required for an SDRPlay RSP but I have a number of high power local stations which can cause the spectrum to jump when they transmit.
 (The cutoff frequencies of this excellent filter explains the odd Band Changeover frequencies.)
 Search <i>janielectronics.com HA8LFK filter</i> also has an ebay shop.
 
-<P ALIGN="LEFT"><img src="Images/zsc001.JPG" width=200> <img src="Images/zsc002.JPG" width=200> <img src="Images/zsc003a.jpg" width=200>  
+<P ALIGN="LEFT"><img src="Images/zsc001.JPG" width=200> <img src="Images/zsc002.JPG" width=200> <img src="Images/zsc003a.jpg" width=250>  
 <img src="Images/zsc004.JPG" width=200>  
