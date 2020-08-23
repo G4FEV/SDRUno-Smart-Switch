@@ -145,11 +145,11 @@ Remember to re-comment these before final use for optimum performance.
 
 * Add some Ferrite Noise Suppression to all leads to and from the computer. The Ferrite Grade may be totally wrong but they never do any harm.
 
+## Practical Application
 
- With a note on switching filter and antenna simultaneously
+For antenna switching I use a nice SMA 6 Way relay on Bands A to F. Band outputs G to M are used to switch a rather nice bandpass filter from HA8LFK. Normally additional filtering is not required for an SDRPlay RSP but I have a number of high power local stations which can cause the spectrum to jump when they transmit.
+(The cutoff frequencies of this excellent filter explains the odd Band Changeover frequencies.)
+Search <i>janielectronics.com HA8LFK filter</i> also has an ebay shop.
 
-Why the filter I am using
-How am I using it.
-
-
-
+<P ALIGN="LEFT"><img src="Images/zsc001.JPG" width=200> <img src="Images/zsc002.JPG" width=200> <img src="Images/zsc003a.jpg" width=200>  
+<img src="Images/zsc004.JPG" width=200>  
