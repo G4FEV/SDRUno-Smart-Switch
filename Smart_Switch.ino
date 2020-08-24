@@ -1,5 +1,5 @@
 /*
- *         SDRuno SMART SWITCH David Whitty G4FEV
+ *         SDRuno SMART-SWITCH David Whitty G4FEV
  *
  *  https://github.com/G4FEV/SDRUno-Smart-Switch
  *  
@@ -12,14 +12,13 @@
  *  Kenwood CAT Command set. The Arduino sends a request to SDRuno 
  *  which responds with the information required.
  *  The frequency data is decoded and the user may edit the 
- *  Band-Limits below thus the RF spectrum may be split into as 
- *  many as 14 outputs (Easily Exandable) to switch Antennas or Filters 
- *  as required.
+ *  Band-Limits below. The RF spectrum may be split into as 
+ *  many as 14 outputs to switch Antennas or Filters as required.
  *
  *  The decoded data is displayed on a 20x4  I2C LCD Display.
 */
 
-String ver ("Ver 1.02 Aug 2020"); //Version
+String ver ("Ver 1.03 Aug 2020"); //Version
 
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
@@ -34,10 +33,11 @@ String ver ("Ver 1.02 Aug 2020"); //Version
 */
 SoftwareSerial mySerial(8, 9); // Pin 8=RX, Pin 9=TX  TTL level CAT.
 //Connect to SDRUno Com port via an     FTDI USB to TTL FT232RL converter
-
-LiquidCrystal_I2C lcd(0x3F, 20, 7); // Set the LCD I2C address. Normally 0x27
- //If you are unsure of the address of your LCD you can load an
- //I2c scanner to discover its address.
+//                                      Connect 8 to FTDI Tx, 9 to FTDI Rx
+LiquidCrystal_I2C lcd(0x3F, 20,4); //Set LCD I2C address
+ //LiquidCrystal_I2C lcd(0x27, 20,4); //For older displays
+ 
+ //If you are unsure of the LCD address load the I2c scanner.
        
 /*/////////////////////////////////////////////
 //////// Band Limits///////////////////////////
@@ -45,8 +45,8 @@ We have 14 spare pins (If we include unused Analogue pins)which may
 all be used for switching an Antenna or Filter.
 Here is where we set the frequency allocations for each band (A to N).
 
-//They are in the form of     Band?Low    is the low fequency end
-//                            Band?Hi     is the High fequency end
+//They are in the form of     BandXLow    is the low fequency end
+//                            BandXHi     is the High fequency end
               
 If you edit this list take GREAT care to note how each band starts 
 and finishes.
@@ -54,84 +54,77 @@ You may edit the   FREQUENCIES AND THE ANTENNA NAME.
 i.e Band C starts at 1.600001 MHz and ends at 2.5 MHz
 */
 //Band A
-char AntennaA[] = " VLF Antenna ";   //Fill all 13 characters
-long BandALow = 1000;            //1KHz  Band A     Low Limit
+char AntennaA[] = " VLF Antenna ";  //Fill all 13 characters
+long BandALow = 1000;              //1KHz  Band A     Low Limit
 long BandAHi = 150000;            //150KHz  Band A     High Limit
 
 //Band B
-char AntennaB[] = " Medium Wave ";
-long BandBLow = 150001; // Band B   Low Limit
-long BandBHi = 1600000; //1.6MHz Band B     High Limit
+char AntennaB[] = " Medium Wave ";  //Fill all 13 characters
+long BandBLow = 150001;           // Band B   Low Limit
+long BandBHi = 1600000;          //1.6MHz Band B     High Limit
 
 //Band C
-char AntennaC[] = " LF Antenna  ";    //Fill all 13 characters
-long BandCLow = 1600001; // Band C   Low Limit
-long BandCHi = 2500000; //2.5 MHz Band C   High Limit
-
+char AntennaC[] = " LF Antenna  ";  //Fill all 13 characters
+long BandCLow = 1600001;           // Band C   Low Limit
+long BandCHi = 2500000;           //2.5 MHz Band C   High Limit
 //Band D
-char AntennaD[] = "80M Long Wire";
-long BandDLow = 2500001; // Band C  Low Limit
-long BandDHi = 4700000; //4.7 MHz Band D  High Limit
+char AntennaD[] = "80M Long Wire";  //Fill all 13 characters
+long BandDLow = 2500001;           // Band C  Low Limit
+long BandDHi = 4700000;           //4.7 MHz Band D  High Limit
 
 //Band E
-char AntennaE[] = " 40M Dipole  ";    //Fill all 13 characters
-long BandELow = 4700001; // Band E   Low Limit
-long BandEHi = 7500000; //7.5 MHz Band E   High Limit
+char AntennaE[] = " 40M Dipole  ";  //Fill all 13 characters
+long BandELow = 4700001;           // Band E   Low Limit
+long BandEHi = 7500000;           //7.5 MHz Band E   High Limit
 
 //Band F
 char AntennaF[] = " 20M Vertical";
-long BandFLow = 7500001; // Band F   Low Limit
-long BandFHi = 14500000; //14.5 MHz Band F   High Limit
+long BandFLow = 7500001;          // Band F   Low Limit
+long BandFHi = 14500000;          //14.5 MHz Band F   High Limit
 
 //Band G
 char AntennaG[] = " HF Antenna  ";
-long BandGLow = 14500001; // Band G   Low Limit
-long BandGHi = 21500000; //21.5 MHz   Band G   High Limit
+long BandGLow = 14500001;        // Band G   Low Limit
+long BandGHi = 21500000;        //21.5 MHz   Band G   High Limit
 
 //Band H
-char AntennaH[] = "  HF Beam    ";   //Fill all 13 characters
-long BandHLow = 21500001; // Band H   Low Limit
-long BandHHi =33000000; //33 MHz     Band H   High Limit
+char AntennaH[] = "  HF Beam    ";  //Fill all 13 characters
+long BandHLow = 21500001;          // Band H   Low Limit
+long BandHHi =33000000;           //33 MHz     Band H   High Limit
 
 //Band I
 char AntennaI[] = "   6M Beam   ";
-long BandILow = 33000001; // Band I   Low Limit
-long BandIHi = 56000000; //56 MHz    Band I   High Limit
+long BandILow = 33000001;         // Band I   Low Limit
+long BandIHi = 56000000;         //56 MHz    Band I   High Limit
 
 //Band J
-char AntennaJ[] = " VHF Antenna ";    // Fill all 13 characters
-long BandJLow = 56000001; // Band J   Low Limit
-long BandJHi = 150000000; //150 MHz    Band J   High Limit
+char AntennaJ[] = " VHF Antenna ";  // Fill all 13 characters
+long BandJLow = 56000001;         // Band J   Low Limit
+long BandJHi = 150000000;        //150 MHz    Band J   High Limit
 
 //Band K
 char AntennaK[] = " UHF Antenna ";
-long BandKLow = 150000001; // Band K   Low Limit
-long BandKHi = 999000000; //999 MHz  Band K   High Limit
+long BandKLow = 150000001;       // Band K   Low Limit
+long BandKHi = 999000000;       //999 MHz  Band K   High Limit
 
 //Band L
-char AntennaL[] = " SHF Discone ";   // Fill all 13 characters
-long BandLLow = 999000001; // Band L   Low Limit
-long BandLHi = 1500000000; //1500 MHz   Band L   High Limit
+char AntennaL[] = " SHF Discone ";  // Fill all 13 characters
+long BandLLow = 999000001;         // Band L   Low Limit
+long BandLHi = 1500000000;        //1500 MHz   Band L   High Limit
 
 //Band M
 char AntennaM[] = " Satcom Ant  ";
-long BandMLow = 1500000001; // Band M   Low Limit
-long BandMHi = 1750000000; //1750 MHz   Band M   High Limit
+long BandMLow = 1500000001;      // Band M   Low Limit
+long BandMHi = 1750000000;      //1750 MHz   Band M   High Limit
 
 //Band N
 char AntennaN[] = "  Satcom 2   ";
-long BandNLow = 1750000001; // Band N   Low Limit
-long BandNHi = 2000000000; //2000 MHz   Band N   High Limit
+long BandNLow = 1750000001;      // Band N   Low Limit
+long BandNHi = 2000000000;      //2000 MHz   Band N   High Limit
 
 /////////////////////////////END OF BAND LIMITS//////////////////////
-////Unless you want to modify the code there is nothing else that requires editing.
 
-//All debug messages to the Serial Monitor (Apart from the current Frequency) are 
-//commented out which makes the code run slightly faster. 
-// Uncomment the                 Serial.print    lines to see how the code works.
-// I always put my             //Serial.print    lines at the centre of the page
-
-////////////////////Pin definition for Bands.
+////////////////////Pin definition for Bands.//////////////////////
 //  Pin 0 & 1 Reserved for Arduno Serial Monitor
 //  Pin 8 & 9 Reserved for Comms to SDRuno
 
@@ -158,9 +151,11 @@ String FrequencyString ;
 
 void setup()
 {
-  lcd.begin();   // Start the LCD
+ // lcd.begin();   // Old I2c Library
+  lcd.init(); //Latest I2c Library
+  lcd.backlight();
   lcd.setCursor(1, 0);
-  lcd.print("SDRuno Smart Switch");
+  lcd.print("SDRuno Smart-Switch");
   lcd.setCursor(7, 1);
   lcd.print("G4FEV"); //Your name in lights here (For 1 Second anyway)
 
@@ -195,7 +190,7 @@ void loop() {
   //delay(1000); //so we can read the Serial Monitor while debugging
 
   lcd.setCursor(1, 0);
-  lcd.print("SDRuno Smart Switch");
+  lcd.print("SDRuno Smart-Switch");
 
   //////////////////////////////GET THE SERIAL DATA ///////////////////////////////
   /*
