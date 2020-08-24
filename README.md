@@ -95,9 +95,6 @@ The bands don’t have to run contiguously. This is just an example.
 * Just because there are 14 outputs (Bands A–N) the user can split the spectrum into as few chunks as required.
 * Take care as you move higher up in the spectrum. There are lots of zeroooos to trip over. It’s easy to get in a right old mess. (I speak from experience!)
 
-* There is no reason why you shouldn’t have TWO or more outputs active for a particular frequency if that suits your needs (To switch in a filter or preamp).
-
-
 Serial.print debug messages have been commented-out, apart from the current Frequency.
 
 
@@ -143,11 +140,7 @@ Remember to re-comment these before final use for optimum performance.
 
 ## Practical Application
 
-For antenna switching I use a 6 Way SMA relay on Bands A to F. Band outputs G to M are used to switch a rather nice bandpass filter from HA8LFK. Normally additional filtering is not required for an SDRPlay RSP but I have a number of high power local stations which can cause the spectrum to jump when they transmit.
-The cut off frequencies of this excellent filter explains the odd Band Changeover frequencies.
-Search <i>janielectronics.com HA8LFK filter</i> also has an ebay shop.
-
+For antenna switching I use a 6 Way SMA relay on Bands A to F. 
 <P ALIGN="LEFT"><img src="Images/zsc001.JPG" width=200> <img src="Images/zsc002.JPG" width=200> <img src="Images/zsc003a.jpg" width=250>  
-<img src="Images/zsc004.JPG" width=200>  
 
 That's all folks. 73 de Dave G4FEV.
