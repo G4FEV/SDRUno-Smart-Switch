@@ -92,11 +92,9 @@ The bands don’t have to run contiguously. This is just an example.
 
 * You don’t have to use all the outputs just park them out of the way near the 2GHz (or 1KHz) end of the spectrum so they never operate or comment them out.
 
-* Just because there are 14 outputs (Bands A–N) the user can split the spectrum into as few chunks as required.
 * Take care as you move higher up in the spectrum. There are lots of zeroooos to trip over. It’s easy to get in a right old mess. (I speak from experience!)
 
 Serial.print debug messages have been commented-out, apart from the current Frequency.
-
 
 Uncommenting the remaining Serial.print messages will allow the user to monitor the decoding process the results of which may be viewed on the serial monitor as the program runs. Remember to Re-comment Serial.print messages when you are finished and the code will run slightly faster.
 
