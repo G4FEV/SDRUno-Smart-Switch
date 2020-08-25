@@ -2,7 +2,7 @@
 
 ## David Whitty G4FEV
 
-<i>Last edit 23 August 2020.</i>
+<i>Last edit 25 August 2020.</i>
 
 This software is given freely for non-commercial use with no guarantee given or implied.
 SDRUno is a product of SDRPlay Ltd with which the author has no connection other than as a satisfied customer.
@@ -60,10 +60,10 @@ RS232 to TTL converters are easily and cheaply available online.
 
 The maximum current an Arduino pin can switch is 40mA so we use a transistor to switch coax relays or slave relays.
 
-Ready mounted Arduino relays are available on auction sites but CAUTION. Many of these are Active LOW. 
+If you choose to use the Ready mounted Arduino relays available on auction sites "CAUTION". Many of these are Active LOW. 
 The code is designed for ACTIVE HIGH.
 You could swap all the Hi and lows but it would mean most of your relays would be operated all the time.
-If you want to use Ready-Made Relay Boards look for the type with a jumper that can be set ACTIVE HI.
+If you decide to use these Ready-Made Relay Boards look for the type with a jumper that can be set ACTIVE HI.
 
 <P ALIGN="LEFT"><img src="Images/relayno.jpg" width=200> <img src="Images/relayyes.jpg" width=200>  
  <img src="Images/relaycct2.jpg" width=400>
@@ -138,7 +138,7 @@ Remember to re-comment these before final use for optimum performance.
 
 ## Practical Application
 
-For antenna switching I use a 6 Way SMA relay on Bands A to F. 
+For antenna switching I use a 6 Way SMA relay configured for Bands A to F. The display unit is connected to the relay box located under the bench. 
 <P ALIGN="LEFT"><img src="Images/zsc001.JPG" width=200> <img src="Images/zsc002.JPG" width=200> <img src="Images/zsc003a.jpg" width=250>  
 
 That's all folks. 73 de Dave G4FEV.
