@@ -1,3 +1,4 @@
+<meta name='keywords' content='G4FEV, SDRUno, SDRplay'>
 # SDRuno SMART-SWITCH
 
 ## David Whitty G4FEV
